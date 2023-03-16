@@ -1,17 +1,12 @@
 <template>
     <div class="HomePage">
-        <button @click="Redirect()">Login</button>
+        <router-link to="/about">Login</router-link>
     </div>
     
 </template>
 
 <script>
     export default {
-        methods: {
-            Redirect() {
-            this.$router.push({name: 'Login'});
-            }
-        },
         name: 'HomePage',
         props: {
             

@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import LoginPage from './components/Login.vue'
+import LoginPage from './components/LoginPage.vue'
 import AdminPanel from './components/AdminPanel.vue'
-import HomePage from './components/Home.vue'
+import HomePage from './components/HomePage.vue'
 
 export default {
   name: 'App',

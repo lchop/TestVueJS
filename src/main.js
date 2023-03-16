@@ -5,11 +5,12 @@ createApp(App).mount('#app')
 
 
 
-import { createApp } from 'vue'
-import App from './App.vue'
+// import { createApp } from 'vue'
+// import App from './App.vue'
 import * as VueRouter from 'vue-router'
-import Home from './pages/Home.vue'
-import About from './pages/About.vue'
+import Home from './components/HomePage.vue'
+import LoginPage from './components/LoginPage.vue'
+import AdminPanel from './components/AdminPanel.vue'
 
 const router = VueRouter.createRouter({
 history: VueRouter.createWebHistory(),
@@ -20,9 +21,14 @@ routes: [
     component: Home
     },
     {
-        path: '/about',
-    name: 'About',
-    component: About
+    path: '/login',
+    name: 'Login',
+    component: LoginPage
+    },
+    {
+    path: '/adminpanel',
+    name: 'AdminPanel',
+    component: AdminPanel
     }
   ]
 })

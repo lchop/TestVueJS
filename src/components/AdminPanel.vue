@@ -8,7 +8,7 @@
 
 
 <script>
-import anything from './Login.vue' 
+import anything from './LoginPage.vue' 
 
 export default {
     name: 'AdminPanel',
