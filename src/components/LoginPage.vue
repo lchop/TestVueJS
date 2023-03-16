@@ -4,11 +4,11 @@
 </template>
 
 <form>
-  <h3>Bonjour merci de vous login.</h3><br>
-  <input style="border-color: transparent; height: 20px;width: 150px;position: relative;left: 20px;" type="text" id="username" placeholder="       Id"><br>
-  <input style="border-color: transparent; height: 20px;width: 250px;position: relative;left: 60px;" type="password" id="password" placeholder="      Mot de passe">
-  <button style="background-color: transparent;border-radius: 20px;border-style: solid;height: 35px;width: 80px;position: relative;left: 70px;" type="button" @click="getInfo">Login</button>
-</form>  
+    <h3>Bonjour merci de vous login.</h3><br>
+    <input style="border-color: transparent; height: 20px;width: 150px;position: relative;left: 20px;" type="text" id="username" placeholder="       Id"><br>
+    <input style="border-color: transparent; height: 20px;width: 250px;position: relative;left: 60px;" type="password" id="password" placeholder="      Mot de passe">
+    <button style="background-color: transparent;border-radius: 20px;border-style: solid;height: 35px;width: 80px;position: relative;left: 70px;" type="button" @click="getInfo">Login</button>
+  </form>
   
 <script>
 export default {
@@ -56,26 +56,6 @@ var objPeople = [
 
 ]
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>

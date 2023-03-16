@@ -1,9 +1,11 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <h1>Merci de vous login.</h1>
-  <LoginPage/>
-  <AdminPanel/>
-  <HomePage/>
+  <div>
+    <img alt="Vue logo" src="./assets/logo.png">
+    <h1>Merci de vous login.</h1>
+    <LoginPage/>
+    <AdminPanel/>
+    <HomePage/>
+  </div>
 </template>
 
 <script>
