@@ -1,8 +1,9 @@
 <template>
-    <div class="Login">
-      Hey
+    <div class="AdminPanel">
     </div>
 </template>
+
+<h1>Hey ça va ?</h1>
 
 
 
@@ -10,10 +11,6 @@
 import anything from './Login.vue' 
 
 export default {
-    components: {
-        AdminPanel
-    },
-
     name: 'AdminPanel',
     props: {
         username: anything,

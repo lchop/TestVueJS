@@ -1,13 +1,14 @@
 <template>
-  <div class="Login">
-    <form>
-      <h3>Bonjour merci de vous login.</h3><br>
-      <input style="border-color: transparent; height: 20px;width: 150px;position: relative;left: 20px;" type="text" id="username" placeholder="       Id"><br>
-      <input style="border-color: transparent; height: 20px;width: 250px;position: relative;left: 60px;" type="password" id="password" placeholder="      Mot de passe">
-      <button style="background-color: transparent;border-radius: 20px;border-style: solid;height: 35px;width: 80px;position: relative;left: 70px;" type="button" @click="getInfo">Login</button>
-    </form>  
+  <div class="LoginPage">
   </div>
 </template>
+
+<form>
+  <h3>Bonjour merci de vous login.</h3><br>
+  <input style="border-color: transparent; height: 20px;width: 150px;position: relative;left: 20px;" type="text" id="username" placeholder="       Id"><br>
+  <input style="border-color: transparent; height: 20px;width: 250px;position: relative;left: 60px;" type="password" id="password" placeholder="      Mot de passe">
+  <button style="background-color: transparent;border-radius: 20px;border-style: solid;height: 35px;width: 80px;position: relative;left: 70px;" type="button" @click="getInfo">Login</button>
+</form>  
   
 <script>
 export default {
@@ -21,7 +22,8 @@ export default {
           // check is user input matches username and password of a current index of the objPeople array
           if(username == objPeople[i].username && password == objPeople[i].password) {
             console.log("Tu t'es bien login en tant que " + username)
-            window.location.href = '/components/AdminPanel';
+            this.$router.push({name:'AdminPanel'});
+            // window.location.href = '/AdminPanel';
             // window.location.reload()
             // stop the function if this is found to be true
             return
@@ -39,7 +41,6 @@ export default {
   },
   name: 'LoginPage',
   props: {
-    title: String,
   }
 }
 
