@@ -1,32 +1,26 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <!-- <h1>{{ title }}</h1> -->
+    <!-- <form  action="#" method="post">Login</form>
+    <textarea name="Test" id="test" cols="50" rows="2.5"></textarea>
+    <button onsubmit="console.log(test);" style="position: fixed;width: 60px; height: 25px;left: 663px;top: 353px;">Login</button>
+   -->
+    <!-- <form method="get" onsubmit="Verifie(this)">
+      <label for="pseudo">Pseudo : </label> <input type="text" id="pseudo" name="pseudo" /><br />
+      <label for="pass">Mot de passe : </label> <input type="password" id="pass" name="pass" /><br />
+      <input type="submit" value="Connexion" />
+    </form> -->
+
+
+    <form>
+			<input type="text" id="username" placeholder="Choose Username">
+			<input type="password" id="password" placeholer="Choose Password">
+			<button type="button" onclick="getInfo()">Click Me</button>
+		</form>
+
+		
+  
+  
   </div>
 </template>
 
@@ -34,9 +28,44 @@
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    title: String,
+    getInfo
   }
 }
+
+
+var objPeople = [
+	{ // Object @ 0 index
+		username: "sam",
+		password: "codify"
+	},
+	{ // Object @ 1 index
+		username: "matt",
+		password: "academy"
+	},
+	{ // Object @ 2 index
+		username: "chris",
+		password: "forever"
+	}
+
+]
+
+function getInfo() {
+	var username = document.getElementById('username').value
+	var password = document.getElementById('password').value
+
+	for(var i = 0; i < objPeople.length; i++) {
+		// check is user input matches username and password of a current index of the objPeople array
+		if(username == objPeople[i].username && password == objPeople[i].password) {
+			console.log(username + " is logged in!!!")
+			// stop the function if this is found to be true
+			return
+		}
+	}
+	console.log("incorrect username or password")
+}
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -53,6 +82,6 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: #60ffb8;
 }
 </style>
